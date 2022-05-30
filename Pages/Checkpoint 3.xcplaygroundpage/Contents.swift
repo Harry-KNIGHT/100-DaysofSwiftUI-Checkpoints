@@ -44,6 +44,6 @@ func fizzBuzzSwitch() {
     }
 }
 
-fizzBuzz()
+fizzBuzzSwitch()
 
 //: [Next](@next)
