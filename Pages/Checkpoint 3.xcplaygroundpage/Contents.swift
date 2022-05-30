@@ -27,8 +27,23 @@ var troughtHundred = (1...100).map { (number: Int) -> String in
         return String(number) // converted into string for compilation
     }
 }
-print(troughtHundred.joined(separator: "\n"))
+//print(troughtHundred.joined(separator: "\n"))
 
-// First loop is better and simpler.
+func fizzBuzzSwitch() {
+    for num in (1...100) {
+        switch (num % 3 == 0, num % 5 == 0) {
+        case (true, false):
+            print("\(num) Fizz")
+        case (false, true):
+            print("\(num) Buzz")
+        case (true, true):
+            print("\(num) Fizz Buzz")
+        default:
+            print(String(num))
+        }
+    }
+}
+
+fizzBuzz()
 
 //: [Next](@next)
