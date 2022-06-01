@@ -18,7 +18,10 @@ if let intArray2 = intArray(nil) {
 func intArray2(_ integers: [Int]?) throws -> Int {
     return integers?.randomElement() ?? Int.random(in: 1...100)
 }
-print(try intArray2([23, 25, 44]))
 
-print(try intArray2(nil))
+let isNotNil = try intArray2([23, 25, 44])
+print(isNotNil)
+
+let isNil = try intArray2(nil)
+print(isNil)
 //: [Next](@next)
